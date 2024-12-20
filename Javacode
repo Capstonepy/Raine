@@ -1,0 +1,42 @@
+ome to Area & Circumference ================\u001b[0m");
+                    System.out.println("Enter the radius of the circle:");
+                    float radius = scan.nextFloat();
+
+                    double area = 3.14 * radius * radius;
+                    double circumference = 2 * 3.14 * radius;
+
+                    System.out.println("\u001b[33mArea: " + area + "\u001b[0m");
+                    System.out.println("\u001b[34mCircumference: " + circumference + "\u001b[0m");
+                    break;
+                }
+
+                case 4: {
+                    clearConsole();
+                    System.out.println("\u001b[46;1m============== Welcome to Conversion ================\u001b[0m");
+                    System.out.println("Enter distance in centimeters:");
+                    double cm = scan.nextDouble();
+
+                    double meters = cm / 100;
+                    double millimeters = cm * 10;
+
+                    System.out.println("\u001b[32mDistance in meters: " + meters + " m\u001b[0m");
+                    System.out.println("\u001b[32mDistance in millimeters: " + millimeters + " mm\u001b[0m");
+                    break;
+                }
+
+                case 5:
+                    clearConsole();
+                    System.out.println("\u001b[42;1mExiting. Thank you!\u001b[0m");
+                    System.exit(0);
+
+                default:
+                    System.out.println("\u001b[41mInvalid choice. Please try again.\u001b[0m");
+            }
+
+            System.out.println("\u001b[43;1mDo you want to try again? (Yes/No):\u001b[0m");
+            userChoice = scan.next();
+        } while (userChoice.equalsIgnoreCase("Yes"));
+
+        scan.close();
+    }
+}
